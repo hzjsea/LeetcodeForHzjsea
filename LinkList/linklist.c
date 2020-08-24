@@ -123,11 +123,6 @@ int main()
     int res = IsEmpty(hp);
     printf("%d",res);
 
-
-
-
-
-
     // 带头结点
     PointNode headPoint2;
     PointNode hp2 = InitList2(headPoint2);

@@ -33,7 +33,6 @@ int InitNode(){
 // 初始化链表
 // 头节点 -> NULL
 
-
 int InitSingList(nodeAddress *firstNode){
     *firstNode = (nodeAddress)malloc(sizeof(struct Node));
     (*firstNode) -> next = NULL;
