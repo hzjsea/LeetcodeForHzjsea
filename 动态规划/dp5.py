@@ -15,24 +15,24 @@
 # 最少 数组的最后的一个位置 没有连续的要求
 
 
+# class Solution(object):
+#     def jump(self, nums):
+#         length=len(nums)
+#         x=[0]*length
+#         for i in range(length):
+#             for j in range(i+1,length):
+#                 if(nums[i]>=j-i):
+#                     if(x[j]>0):
+#                         x[j]=min(x[j],x[i]+1)
+#                     else:
+#                         x[j]=x[i]+1
+#         return x[length-1]
 
-class Solution:
-    def jump(self, nums) -> int:
-        n = len(nums)
-        if n == 1:
-            return 0
-        dp = [0] * n
-        for i in range(1,n):
-            for j in range(n):
-                if j + nums[j] >= i:
-                    dp[i] = min(dp[i], dp[j] + 1)
-        print(dp)
-        return dp[n-1]
-
-if __name__ == "__main__":
-    s = Solution()
+# if __name__ == "__main__":
+#     s = Solution()
     
-    nums = [2,3,1,1,4]
-    nums = [2,3,0,1,4]
-    print(s.jump(nums=nums))
+#     nums = [2,3,1,1,4]
+#     # nums = [2,3,0,1,4]
+#     nums = [0,0,0,0,1]
+#     print(s.jump(nums=nums))
     
